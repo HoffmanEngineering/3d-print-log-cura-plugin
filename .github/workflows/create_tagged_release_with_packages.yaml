@@ -5,10 +5,20 @@ on:
     tags:
       - "v*"
 
+# Read-only by default; the one job that needs to write widens it for itself below.
+permissions:
+  contents: read
+
 jobs:
   create-curapackages:
     name: "Tagged Release"
     runs-on: "ubuntu-latest"
+
+    # Creating the release and uploading the .curapackage assets is a write to the
+    # repository, so this is the floor rather than an over-grant. It was previously
+    # running on the repository default scope, which is broader.
+    permissions:
+      contents: write
 
     steps:
       - uses: actions/checkout@v3

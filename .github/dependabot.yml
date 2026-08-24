@@ -1,0 +1,24 @@
+version: 2
+
+# Nothing watched versions in this repository before this file existed.
+#
+# github-actions is the only applicable ecosystem here: the plugin is plain Python loaded
+# by Cura's own bundled interpreter, with no requirements.txt, setup.py or lockfile for a
+# `pip` entry to read. Dependencies come from whatever Cura ships.
+#
+# Note the limit of what this can watch. Dependabot only updates actions pinned to a tag
+# or SHA, so the two mutable refs in create_tagged_release_with_packages.yaml --
+# `fieldOfView/cura-plugin-packager-action@main` and
+# `marvinpinto/action-automatic-releases@latest` -- are invisible to it and stay a manual
+# review. That is worth knowing rather than assuming this file covers them.
+
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      actions:
+        patterns:
+          - "*"
