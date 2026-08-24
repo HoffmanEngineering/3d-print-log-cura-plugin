@@ -25,3 +25,11 @@ What settings that are logged can be modified through the `Extensions -> 3D Prin
 ## Contributing
 
 Want to contribute? Feel free to create issues and pull requests! Or leave feedback directly at [3D Print Log's Feedback](https://www.3dprintlog.com/feedback). Let me know what features you would like to see.
+
+## Questions & Discussions
+
+Usage questions are best asked in [**3D Print Log Discussions**](https://github.com/HoffmanEngineering/3d-print-log-ui/discussions/categories/q-a). That board is the front door for the whole project — the web app, the API, and both slicer plugins — so you do not have to work out which repository your question belongs to, and answers stay searchable for whoever asks next.
+
+If a setting is logged incorrectly, that is almost always this plugin rather than the API. Saying which Cura version you are on, and which setting is wrong, is the detail that otherwise costs a round trip.
+
+Bug reports and feature requests belong in this repository's issues.
